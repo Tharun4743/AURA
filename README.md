@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 AURA — AI Unified Retrieval Assistant
+# ðŸ§  AURA â€” AI Unified Retrieval Assistant
 
 ### <i>Air-Gapped Local Multimodal RAG Engine & Offline AI Knowledge Assistant for Desktop & Web</i>
 
@@ -15,12 +15,12 @@
 </p>
 
 <p align="center">
-  <a href="#-key-highlights">Key Highlights</a> •
-  <a href="#-system-architecture">Architecture</a> •
-  <a href="#-core-features">Features</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-api--data-flow">API Reference</a> •
+  <a href="#-key-highlights">Key Highlights</a> â€¢
+  <a href="#-system-architecture">Architecture</a> â€¢
+  <a href="#-core-features">Features</a> â€¢
+  <a href="#-tech-stack">Tech Stack</a> â€¢
+  <a href="#-quick-start">Quick Start</a> â€¢
+  <a href="#-api--data-flow">API Reference</a> â€¢
   <a href="#-author--recognition">Author</a>
 </p>
 
@@ -28,28 +28,28 @@
 
 ---
 
-## 🖼️ Preview & Demo
+## ðŸ–¼ï¸ Preview & Demo
 
 <div align="center">
   <img src="assets/preview.png" alt="AURA AI Unified Retrieval Assistant Dashboard Preview" width="95%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
-  <p><i>100% On-Device Document Ingestion • Local Dense Embeddings • Real-Time WebSocket Streaming • Zero Cloud Telemetry</i></p>
+  <p><i>100% On-Device Document Ingestion â€¢ Local Dense Embeddings â€¢ Real-Time WebSocket Streaming â€¢ Zero Cloud Telemetry</i></p>
 </div>
 
 ---
 
-## ⚡ Executive Summary & Value Proposition
+## âš¡ Executive Summary & Value Proposition
 
 **AURA (AI Unified Retrieval Assistant)** is an enterprise-grade, air-gapped local multimodal Retrieval-Augmented Generation (RAG) platform architected by **Tharunkumar K** at **V.S.B. Engineering College, Karur (VSBEC)**. Engineered from the ground up for strict confidentiality and compliance, AURA eliminates cloud API fees and third-party data transmission risks by executing quantized local LLMs (`llama3`) and dense embeddings (`nomic-embed-text`) entirely on local consumer silicon.
 
-### 🏆 Key Engineering Metrics & Distinctions
-- 🌟 **Recognition:** Featured System Architecture by Tharunkumar K — Winner at Code Thugs 2K26 & Top Developer Portfolio Showcase at V.S.B. Engineering College.
-- ⚡ **Throughput & Speed:** Sub-100ms local vector cosine similarity retrieval and real-time bi-directional token streaming over WebSockets.
-- 👥 **Real-World Impact:** Eliminates 100% of recurring cloud token egress costs for air-gapped enterprise, defense, and healthcare document workloads.
-- 🛡️ **Reliability & Privacy:** Zero external network telemetry, Apache PDFBox document segmentation, and embedded SQLite vector persistence.
+### ðŸ† Key Engineering Metrics & Distinctions
+- ðŸŒŸ **Recognition:** Featured System Architecture by Tharunkumar K â€” Winner at Code Thugs 2K26 & Top Developer Portfolio Showcase at V.S.B. Engineering College.
+- âš¡ **Throughput & Speed:** Sub-100ms local vector cosine similarity retrieval and real-time bi-directional token streaming over WebSockets.
+- ðŸ‘¥ **Real-World Impact:** Eliminates 100% of recurring cloud token egress costs for air-gapped enterprise, defense, and healthcare document workloads.
+- ðŸ›¡ï¸ **Reliability & Privacy:** Zero external network telemetry, Apache PDFBox document segmentation, and embedded SQLite vector persistence.
 
 ---
 
-## 🏗️ System Architecture & Data Flow
+## ðŸ—ï¸ System Architecture & Data Flow
 
 The following diagram illustrates AURA's local pipeline, spanning local document parsing, dense vector embeddings, vector similarity matching, and WebSocket streaming token delivery:
 
@@ -93,18 +93,18 @@ graph TD
 
 ---
 
-## ✨ Core Features
+## âœ¨ Core Features
 
-- 🛡️ **100% Air-Gapped Local Inference:** Zero cloud API dependencies. Runs `llama3` and `nomic-embed-text` locally via Ollama without internet connectivity.
-- 📄 **Deterministic PDF Parsing & Chunking:** Ingests complex multi-page PDFs using Apache PDFBox with strict page-level citation tagging.
-- ⚡ **Real-Time WebSocket Streaming:** Low-latency token-by-token generation delivered over bi-directional Spring Boot WebSocket channels (`/ws/chat`).
-- 🗄️ **Embedded Vector & Relational Storage:** Embedded SQLite database handling chat session history, document registries, and local embedding vectors.
-- 🖥️ **Dual Web & Desktop Distribution:** Runs both as a lightweight React 19 + Vite web application and as a packaged cross-platform Electron 31 desktop app.
-- 🎯 **Ground-Truth Hallucination Defense:** Every response provides clickable, verified references to exact document page numbers and text excerpts.
+- ðŸ›¡ï¸ **100% Air-Gapped Local Inference:** Zero cloud API dependencies. Runs `llama3` and `nomic-embed-text` locally via Ollama without internet connectivity.
+- ðŸ“„ **Deterministic PDF Parsing & Chunking:** Ingests complex multi-page PDFs using Apache PDFBox with strict page-level citation tagging.
+- âš¡ **Real-Time WebSocket Streaming:** Low-latency token-by-token generation delivered over bi-directional Spring Boot WebSocket channels (`/ws/chat`).
+- ðŸ—„ï¸ **Embedded Vector & Relational Storage:** Embedded SQLite database handling chat session history, document registries, and local embedding vectors.
+- ðŸ–¥ï¸ **Dual Web & Desktop Distribution:** Runs both as a lightweight React 19 + Vite web application and as a packaged cross-platform Electron 31 desktop app.
+- ðŸŽ¯ **Ground-Truth Hallucination Defense:** Every response provides clickable, verified references to exact document page numbers and text excerpts.
 
 ---
 
-## 🛠️ Technology Stack
+## ðŸ› ï¸ Technology Stack
 
 | Layer | Technologies Used | Rationale / Key Responsibility |
 | :--- | :--- | :--- |
@@ -117,34 +117,34 @@ graph TD
 
 ---
 
-## 📁 Project Directory Structure
+## ðŸ“ Project Directory Structure
 
 ```text
 AURA/
-├── .github/
-│   ├── workflows/
-│   │   └── ci.yml             # GitHub Actions CI workflow (Java & Node.js build)
-│   └── ISSUE_TEMPLATE/
-│       ├── bug_report.md      # Standardized bug reporting template
-│       └── feature_request.md # Architectural feature request template
-├── assets/                    # System diagrams, UI screenshots, architecture assets
-├── desktop/                   # Electron 31 cross-platform desktop application
-│   └── src/
-│       └── backend/           # Spring Boot 3 Java 17 backend microservice
-│           ├── pom.xml        # Maven build configuration & dependencies
-│           └── src/main/java/ # Controllers, WebSocket handlers, and RAG services
-├── web/
-│   └── frontend/              # React 19 + Vite + Tailwind CSS frontend interface
-│       ├── package.json       # Frontend scripts and client libraries
-│       └── src/               # React components, WebSocket hooks, and state
-├── run-web.bat                # Automated one-click Windows launcher
-├── LICENSE                    # MIT Open-Source License
-└── README.md                  # Authoritative system documentation
+â”œâ”€â”€ .github/
+â”‚   â”œâ”€â”€ workflows/
+â”‚   â”‚   â””â”€â”€ ci.yml             # GitHub Actions CI workflow (Java & Node.js build)
+â”‚   â””â”€â”€ ISSUE_TEMPLATE/
+â”‚       â”œâ”€â”€ bug_report.md      # Standardized bug reporting template
+â”‚       â””â”€â”€ feature_request.md # Architectural feature request template
+â”œâ”€â”€ assets/                    # System diagrams, UI screenshots, architecture assets
+â”œâ”€â”€ desktop/                   # Electron 31 cross-platform desktop application
+â”‚   â””â”€â”€ src/
+â”‚       â””â”€â”€ backend/           # Spring Boot 3 Java 17 backend microservice
+â”‚           â”œâ”€â”€ pom.xml        # Maven build configuration & dependencies
+â”‚           â””â”€â”€ src/main/java/ # Controllers, WebSocket handlers, and RAG services
+â”œâ”€â”€ web/
+â”‚   â””â”€â”€ frontend/              # React 19 + Vite + Tailwind CSS frontend interface
+â”‚       â”œâ”€â”€ package.json       # Frontend scripts and client libraries
+â”‚       â””â”€â”€ src/               # React components, WebSocket hooks, and state
+â”œâ”€â”€ run-web.bat                # Automated one-click Windows launcher
+â”œâ”€â”€ LICENSE                    # MIT Open-Source License
+â””â”€â”€ README.md                  # Authoritative system documentation
 ```
 
 ---
 
-## 🚀 Quick Start & Installation
+## ðŸš€ Quick Start & Installation
 
 ### Prerequisites
 - **Node.js** `>= 18.x`
@@ -197,18 +197,18 @@ Visit `http://localhost:5173` in your browser.
 
 ---
 
-## 🔌 API Reference & Endpoints
+## ðŸ”Œ API Reference & Endpoints
 
 | Method | Endpoint | Description | Auth Required |
 | :--- | :--- | :--- | :--- |
-| `POST` | `/api/documents/upload` | Ingests and parses multipart PDF document | ❌ Local Only |
-| `GET` | `/api/documents` | Lists all indexed local knowledge documents | ❌ Local Only |
-| `DELETE` | `/api/documents/{id}` | Purges document chunks and embeddings | ❌ Local Only |
-| `WS` | `/ws/chat` | Bi-directional streaming WebSocket RAG endpoint | ❌ Local Socket |
+| `POST` | `/api/documents/upload` | Ingests and parses multipart PDF document | âŒ Local Only |
+| `GET` | `/api/documents` | Lists all indexed local knowledge documents | âŒ Local Only |
+| `DELETE` | `/api/documents/{id}` | Purges document chunks and embeddings | âŒ Local Only |
+| `WS` | `/ws/chat` | Bi-directional streaming WebSocket RAG endpoint | âŒ Local Socket |
 
 ---
 
-## 🗺️ Roadmap & Milestones
+## ðŸ—ºï¸ Roadmap & Milestones
 
 - [x] Local Document Parsing via Apache PDFBox
 - [x] Ollama LLaMA 3 & Nomic-Embed Dense Pipeline
@@ -220,7 +220,7 @@ Visit `http://localhost:5173` in your browser.
 
 ---
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
 Contributions make the open-source community an inspiring place to learn, inspire, and create:
 1. **Fork** the Project
@@ -231,7 +231,7 @@ Contributions make the open-source community an inspiring place to learn, inspir
 
 ---
 
-## 👨‍💻 Engineering Author
+## ðŸ‘¨â€ðŸ’» Engineering Author
 
 <table border="0">
   <tr>
@@ -242,16 +242,16 @@ Contributions make the open-source community an inspiring place to learn, inspir
       <h3>Tharunkumar K</h3>
       <p>
         <b>Full Stack Developer & AI Systems Engineer</b><br/>
-        🎓 B.Tech in Information Technology — <a href="https://vsbec.com"><b>V.S.B. Engineering College, Karur</b></a> (Batch 2024–2028)<br/>
-        🌟 Recognized for holding the <b>Best GitHub Profile & Top Student Developer</b> at V.S.B. Engineering College (VSBEC)<br/>
-        🥇 <b>Winner — Code Thugs 2K26</b> • 🚀 <b>Smart India Hackathon (SIH)</b> Top 50 National Finalist
+        ðŸŽ“ B.Tech in Information Technology â€” <a href="https://vsbec.com"><b>V.S.B. Engineering College, Karur</b></a> (Batch 2024â€“2028)<br/>
+        ðŸŒŸ Recognized for holding the <b>Best GitHub Profile & Top Student Developer</b> at V.S.B. Engineering College (VSBEC)<br/>
+        ðŸ¥‡ <b>Winner â€” Code Thugs 2K26</b> â€¢ ðŸš€ <b>Smart India Hackathon (SIH)</b> Top 50 National Finalist
       </p>
       <p>
-        <a href="https://tharunkumark4743.netlify.app/">🌐 Portfolio</a> •
-        <a href="https://github.com/Tharun4743">🐙 GitHub (@Tharun4743)</a> •
-        <a href="https://www.linkedin.com/in/tharunkumark4743">💼 LinkedIn</a> •
-        <a href="https://leetcode.com/u/Tharunkumar__K/">🧩 LeetCode</a> •
-        <a href="mailto:tharunkumark42007@gmail.com">📧 Email</a>
+        <a href="https://tharunkumark4743.netlify.app/">ðŸŒ Portfolio</a> â€¢
+        <a href="https://github.com/Tharun4743">ðŸ™ GitHub (@Tharun4743)</a> â€¢
+        <a href="https://www.linkedin.com/in/tharunkumark4743">ðŸ’¼ LinkedIn</a> â€¢
+        <a href="https://leetcode.com/u/Tharunkumar__K/">ðŸ§© LeetCode</a> â€¢
+        <a href="mailto:tharunkumark42007@gmail.com">ðŸ“§ Email</a>
       </p>
     </td>
   </tr>
@@ -259,20 +259,20 @@ Contributions make the open-source community an inspiring place to learn, inspir
 
 ---
 
-## 📜 License & Intellectual Property Notice
+## ðŸ“œ License & Intellectual Property Notice
 
 > [!CAUTION]
-> ### 🔒 PROPRIETARY & CONFIDENTIAL INTELLECTUAL PROPERTY — ALL RIGHTS RESERVED
+> ### ðŸ”’ PROPRIETARY & CONFIDENTIAL INTELLECTUAL PROPERTY â€” ALL RIGHTS RESERVED
 >
-> All rights reserved. This repository, its architecture, source code, workflows, models, and associated documentation are the exclusive intellectual property of **Tharunkumar K™**.
+> All rights reserved. This repository, its architecture, source code, workflows, models, and associated documentation are the exclusive intellectual property of **Tharunkumar Kâ„¢**.
 >
 > **STRICT NOTICE:** No individual, organization, institution, or commercial entity is permitted to use, copy, modify, distribute, reproduce, sublicense, reverse-engineer, deploy, or commercially exploit any portion of this project without express, prior written permission from **Tharunkumar K**.
 >
-> **Copyright © 2026 Tharunkumar K. All Rights Reserved.**  
+> **Copyright Â© 2026 Tharunkumar K. All Rights Reserved.**  
 > See the [`LICENSE`](LICENSE) file for complete legal terms.
 
 <div align="center">
-  <p>If you found this engineering project useful, please give it a ⭐️ <b>Star</b>!</p>
+  <p>If you found this engineering project useful, please give it a â­ï¸ <b>Star</b>!</p>
   <a href="https://github.com/Tharun4743/AURA/stargazers">
     <img src="https://repostamp.com/counter.svg?repo=Tharun4743/AURA" alt="Stargazers" />
   </a>
