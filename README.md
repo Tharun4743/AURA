@@ -1,253 +1,109 @@
+# 🧠 AURA — AI Unified Retrieval Assistant
+### *Air-Gapped Local Multimodal RAG Engine & Offline AI Knowledge Assistant for Desktop & Web*
+
 <div align="center">
 
-# ðŸ§  AURA â€” AI Unified Retrieval Assistant
-
-### <i>Air-Gapped Local Multimodal RAG Engine & Offline AI Knowledge Assistant for Desktop & Web</i>
-
-<p align="center">
-  <a href="https://github.com/Tharun4743/AURA">
-    <img src="https://img.shields.io/badge/AIR_GAPPED-100%25_OFFLINE-10b981?style=for-the-badge&logo=shield&logoColor=white" alt="Air-Gapped Security" />
-  </a>
-  <img src="https://img.shields.io/badge/Version-1.0.0-0f766e?style=for-the-badge&logo=git&logoColor=white" alt="Version" />
-  <img src="https://img.shields.io/badge/License-Strict%20Proprietary-dc2626?style=for-the-badge&logo=lock&logoColor=white" alt="Proprietary License" />
-  <img src="https://img.shields.io/badge/Maintained%3F-Yes-0284c7?style=for-the-badge&logo=githubactions&logoColor=white" alt="Maintenance" />
-  <img src="https://img.shields.io/badge/PRs-Welcome-0f766e?style=for-the-badge&logo=gitpod&logoColor=white" alt="PRs Welcome" />
-</p>
+[![Platform](https://img.shields.io/badge/Platform-Desktop_%26_Web-4f46e5?style=for-the-badge&logo=electron&logoColor=white)](#)
+[![Backend](https://img.shields.io/badge/Backend-Java_17_%2B_Spring_Boot_3-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](#)
+[![Frontend](https://img.shields.io/badge/Frontend-React_%2B_Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](#)
+[![Inference](https://img.shields.io/badge/Local_LLM-Ollama_(LLaMA_3)-000000?style=for-the-badge&logo=ollama&logoColor=white)](#)
+[![License: Strict Proprietary](https://img.shields.io/badge/License-Strict%20Proprietary-dc2626?style=for-the-badge&logo=lock&logoColor=white)](#)
 
 <p align="center">
-  <a href="#-key-highlights">Key Highlights</a> â€¢
-  <a href="#-system-architecture">Architecture</a> â€¢
-  <a href="#-core-features">Features</a> â€¢
-  <a href="#-tech-stack">Tech Stack</a> â€¢
-  <a href="#-quick-start">Quick Start</a> â€¢
-  <a href="#-api--data-flow">API Reference</a> â€¢
-  <a href="#-author--recognition">Author</a>
+  <a href="https://github.com/Tharun4743/AURA">📦 <b>Official GitHub Repository</b></a>
 </p>
 
 </div>
 
 ---
 
-## ðŸ–¼ï¸ Preview & Demo
-
-<div align="center">
-  <img src="assets/preview.png" alt="AURA AI Unified Retrieval Assistant Dashboard Preview" width="95%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
-  <p><i>100% On-Device Document Ingestion â€¢ Local Dense Embeddings â€¢ Real-Time WebSocket Streaming â€¢ Zero Cloud Telemetry</i></p>
-</div>
-
----
-
-## âš¡ Executive Summary & Value Proposition
-
-**AURA (AI Unified Retrieval Assistant)** is an enterprise-grade, air-gapped local multimodal Retrieval-Augmented Generation (RAG) platform architected by **Tharunkumar K** at **V.S.B. Engineering College, Karur (VSBEC)**. Engineered from the ground up for strict confidentiality and compliance, AURA eliminates cloud API fees and third-party data transmission risks by executing quantized local LLMs (`llama3`) and dense embeddings (`nomic-embed-text`) entirely on local consumer silicon.
-
-### ðŸ† Key Engineering Metrics & Distinctions
-- ðŸŒŸ **Recognition:** Featured System Architecture by Tharunkumar K â€” Winner at Code Thugs 2K26 & Top Developer Portfolio Showcase at V.S.B. Engineering College.
-- âš¡ **Throughput & Speed:** Sub-100ms local vector cosine similarity retrieval and real-time bi-directional token streaming over WebSockets.
-- ðŸ‘¥ **Real-World Impact:** Eliminates 100% of recurring cloud token egress costs for air-gapped enterprise, defense, and healthcare document workloads.
-- ðŸ›¡ï¸ **Reliability & Privacy:** Zero external network telemetry, Apache PDFBox document segmentation, and embedded SQLite vector persistence.
+## 1. 📌 Problem Statement & Context
+Enterprises, defense agencies, legal practices, and healthcare facilities handle confidential internal documents under strict regulatory mandates:
+* 🔒 **Data Privacy & Leakage Hazards:** Feeding internal trade secrets, proprietary source code, or patient records to cloud LLM APIs breaches compliance (GDPR, HIPAA, air-gapped policies).
+* 💸 **Unpredictable Cloud Costs:** High-volume document indexing incurs steep per-token pricing and recurring API subscription overhead.
+* 📴 **Connectivity Dead Zones:** Maritime, defense, remote field, and secure cleanroom facilities operate with zero internet connectivity.
 
 ---
 
-## ðŸ—ï¸ System Architecture & Data Flow
+## 2. 🔍 Existing Solutions & Critical Gaps
+| Knowledge Assistant Metric | Commercial Cloud LLM APIs | Generic Local Python Scripts | 🧠 AURA Local RAG System |
+| :--- | :---: | :---: | :---: |
+| **100% Air-Gapped Privacy** | ❌ Data Leaves Organization | ⚠️ Complex Setup / Fragile | ✅ Complete Air-Gapped Isolation |
+| **Real-Time Token Streaming** | ✅ Paid Cloud WebSockets | ❌ Slow Batch Generation | ✅ High-Throughput Java WebSockets |
+| **Verified Page Citations** | ⚠️ Frequent Hallucinations | ❌ Unreliable Scraping | ✅ Deterministic Page-Level Citations |
+| **Unified Web & Desktop App** | ⚠️ Web Only | ❌ CLI Only | ✅ Dual React + Electron Distribution |
 
+---
+
+## 3. 💡 Proposed Solution & Architectural Innovation
+**AURA (AI Unified Retrieval Assistant)** is an air-gapped, privacy-first local multimodal Retrieval-Augmented Generation (RAG) platform architected by **Tharunkumar K**:
+* 🛡️ **100% On-Device Inference:** Executes quantized local LLMs (`llama3`) and dense embeddings (`nomic-embed-text`) entirely on local consumer silicon via Ollama.
+* 📄 **Deterministic Document Extraction:** Ingests multi-page PDFs using Apache PDFBox with strict chunk-to-page citation tracking.
+* ⚡ **High-Concurrency Spring Boot Backend:** Enterprise Java 17 service tier delivering streaming token responses over bi-directional WebSocket connections (`/ws/chat`).
+
+---
+
+## 4. ⚙️ Technical Approach & System Architecture
+
+### 📐 High-Level Architectural Flowchart:
 ```mermaid
 graph TD
-    subgraph Client ["Client Presentation Tier (React 19 / Electron 31)"]
-        UI["React 19 SPA / Electron Window"]
-        WSClient["WebSocket Client /ws/chat"]
-        Upload["Multipart PDF Ingestion UI"]
-    end
-
-    subgraph Backend ["Core Service Engine (Java 17 / Spring Boot 3)"]
-        Gateway["Spring Boot API Gateway & WS Hub"]
-        Parser["Document Parser (Apache PDFBox)"]
-        Chunker["Semantic Chunking & Tokenizer"]
-        Retriever["Cosine Similarity Vector Retriever"]
-    end
-
-    subgraph Inference ["Local On-Device AI Engine (Ollama 100% Offline)"]
-        Embedder["Dense Embedding Engine (nomic-embed-text)"]
-        LLM["Generative LLM Runtime (LLaMA 3 Quantized)"]
-    end
-
-    subgraph Persistence ["Local Embedded Persistence"]
-        DB[("Embedded SQLite DB - Relational & Vector")]
-    end
-
-    Upload -->|Multipart POST /api/documents| Gateway
-    Gateway --> Parser
-    Parser --> Chunker
-    Chunker -->|Raw Text Chunks| Embedder
-    Embedder -->|768-dim Vectors| DB
-    UI -->|Query Stream| WSClient
-    WSClient -->|WS Frame| Gateway
-    Gateway --> Retriever
-    Retriever <-->|k-NN Vector Search| DB
-    Retriever -->|Context + Prompt| LLM
-    LLM -->|Streamed Tokens| Gateway
-    Gateway -->|WebSocket Response Frames| UI
+    User["User Interface (React 19 / Electron 31)"] -->|"WebSocket /ws/chat & REST /api/*"| Gateway["Spring Boot 3 Core Backend (Java 17)"]
+    Gateway --> Parser["Local Document Pipeline (Apache PDFBox)"]
+    Parser --> Embedding["Local Embedding Engine (Ollama nomic-embed-text)"]
+    Embedding --> DB[("Embedded SQLite Vector & Relational Storage")]
+    Gateway --> Retriever["Semantic Vector Retrieval & Context Builder"]
+    Retriever --> LLM["Local LLM Inference Engine (Ollama LLaMA 3)"]
+    LLM -->|"Streaming Token Response"| User
 ```
 
----
-
-## âœ¨ Core Features
-
-- ðŸ›¡ï¸ **100% Air-Gapped Local Inference:** Zero cloud API dependencies. Runs `llama3` and `nomic-embed-text` locally via Ollama without internet connectivity.
-- ðŸ“„ **Deterministic PDF Parsing & Chunking:** Ingests complex multi-page PDFs using Apache PDFBox with strict page-level citation tagging.
-- âš¡ **Real-Time WebSocket Streaming:** Low-latency token-by-token generation delivered over bi-directional Spring Boot WebSocket channels (`/ws/chat`).
-- ðŸ—„ï¸ **Embedded Vector & Relational Storage:** Embedded SQLite database handling chat session history, document registries, and local embedding vectors.
-- ðŸ–¥ï¸ **Dual Web & Desktop Distribution:** Runs both as a lightweight React 19 + Vite web application and as a packaged cross-platform Electron 31 desktop app.
-- ðŸŽ¯ **Ground-Truth Hallucination Defense:** Every response provides clickable, verified references to exact document page numbers and text excerpts.
-
----
-
-## ðŸ› ï¸ Technology Stack
-
-| Layer | Technologies Used | Rationale / Key Responsibility |
+| Subsystem | Technology Stack | Operational Responsibility |
 | :--- | :--- | :--- |
 | **Desktop Shell** | Electron 31, Node.js | Cross-platform desktop runtime, system tray, window management, and bundled JRE |
 | **Web Frontend** | React 19, Vite, Tailwind CSS | High-performance reactive UI with instant hot reloading and markdown rendering |
 | **Backend Core** | Java 17, Spring Boot 3.x | Enterprise REST endpoints, WebSocket streaming controllers, and HikariCP connection pooling |
-| **Document Engine** | Apache PDFBox, Commons IO | High-fidelity text extraction, multi-page segmentation, and token boundary chunking |
-| **Local AI Inference** | Ollama (`llama3`, `nomic-embed-text`) | On-device dense vector embeddings and streaming local LLM generation |
+| **Document Processing**| Apache PDFBox, Commons IO | High-fidelity text extraction, multi-page segmentation, and token boundary chunking |
+| **Local AI Inference** | Ollama (`llama3`, `nomic-embed-text`)| On-device dense vector embeddings and streaming local LLM generation |
 | **Data Storage** | SQLite JDBC, Hibernate ORM | Zero-configuration local database for chat history and vector indexing |
 
 ---
 
-## ðŸ“ Project Directory Structure
-
-```text
-AURA/
-â”œâ”€â”€ .github/
-â”‚   â”œâ”€â”€ workflows/
-â”‚   â”‚   â””â”€â”€ ci.yml             # GitHub Actions CI workflow (Java & Node.js build)
-â”‚   â””â”€â”€ ISSUE_TEMPLATE/
-â”‚       â”œâ”€â”€ bug_report.md      # Standardized bug reporting template
-â”‚       â””â”€â”€ feature_request.md # Architectural feature request template
-â”œâ”€â”€ assets/                    # System diagrams, UI screenshots, architecture assets
-â”œâ”€â”€ desktop/                   # Electron 31 cross-platform desktop application
-â”‚   â””â”€â”€ src/
-â”‚       â””â”€â”€ backend/           # Spring Boot 3 Java 17 backend microservice
-â”‚           â”œâ”€â”€ pom.xml        # Maven build configuration & dependencies
-â”‚           â””â”€â”€ src/main/java/ # Controllers, WebSocket handlers, and RAG services
-â”œâ”€â”€ web/
-â”‚   â””â”€â”€ frontend/              # React 19 + Vite + Tailwind CSS frontend interface
-â”‚       â”œâ”€â”€ package.json       # Frontend scripts and client libraries
-â”‚       â””â”€â”€ src/               # React components, WebSocket hooks, and state
-â”œâ”€â”€ run-web.bat                # Automated one-click Windows launcher
-â”œâ”€â”€ LICENSE                    # Strict Proprietary License
-â””â”€â”€ README.md                  # Authoritative system documentation
-```
+## 5. 📈 Quantifiable Impact & Measurable Benefits
+* 🛡️ **100% Zero-Cloud Data Sovereignty:** Zero bytes transmitted externally; completely air-gapped and immune to third-party data interception.
+* 💰 **Zero Recurring Token Costs:** Eliminates monthly SaaS fees and per-token cloud API bills.
+* ⚡ **Sub-100ms Vector Similarity Matching:** Embedded SQLite vector lookups retrieve relevant context segments instantaneously.
+* 🎯 **Elimination of Hallucinations:** Every generated statement links back to exact page numbers in the uploaded source documents.
 
 ---
 
-## ðŸš€ Quick Start & Installation
-
-### Prerequisites
-- **Node.js** `>= 18.x`
-- **Java Development Kit (JDK 17+)**
-- **Maven** (configured and available on system `PATH`)
-- **Ollama** running locally with models pre-pulled:
-  ```bash
-  ollama pull llama3
-  ollama pull nomic-embed-text
-  ```
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Tharun4743/AURA.git
-cd AURA
-```
-
-### 2. Configure Environment Variables
-```bash
-cp .env.example .env
-```
-
-| Key | Description | Default |
-| :--- | :--- | :--- |
-| `SERVER_PORT` | Spring Boot backend port | `8080` |
-| `OLLAMA_BASE_URL` | Local Ollama endpoint | `http://localhost:11434` |
-| `OLLAMA_MODEL` | Generative chat model | `llama3` |
-| `OLLAMA_EMBED_MODEL`| Dense embedding model | `nomic-embed-text` |
-
-### 3. One-Click Launch (Windows)
-```cmd
-run-web.bat
-```
-
-### 4. Manual Startup
-```bash
-# Terminal 1 - Backend (Spring Boot 3)
-cd desktop/src/backend
-mvn spring-boot:run
-
-# Terminal 2 - Frontend (React + Vite)
-cd web/frontend
-npm install
-npm run dev
-```
-
-Visit `http://localhost:5173` in your browser.
+## 6. 🚀 Feasibility, Operational Viability & Scalability
+* 🔬 **Technical Feasibility:** Runs smoothly on consumer hardware with 16GB RAM using quantized 4-bit and 8-bit local models.
+* 💰 **Economic Viability:** Single-click launcher (`run-web.bat`) eliminates complex orchestration software requirements.
+* 📈 **Enterprise Scalability:** Modular Spring Boot microservice architecture readily accommodates additional local embedding and vision models.
 
 ---
 
-## ðŸ”Œ API Reference & Endpoints
-
-| Method | Endpoint | Description | Auth Required |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/api/documents/upload` | Ingests and parses multipart PDF document | âŒ Local Only |
-| `GET` | `/api/documents` | Lists all indexed local knowledge documents | âŒ Local Only |
-| `DELETE` | `/api/documents/{id}` | Purges document chunks and embeddings | âŒ Local Only |
-| `WS` | `/ws/chat` | Bi-directional streaming WebSocket RAG endpoint | âŒ Local Socket |
-
----
-
-## ðŸ—ºï¸ Roadmap & Milestones
-
-- [x] Local Document Parsing via Apache PDFBox
-- [x] Ollama LLaMA 3 & Nomic-Embed Dense Pipeline
-- [x] Spring Boot 3 Bi-Directional WebSocket Streaming
-- [x] Embedded SQLite Vector Storage & Retrieval
-- [ ] Multi-format ingestion (DOCX, Markdown, Code Repositories)
-- [ ] Quantized Cross-Encoder Reranking for high-precision retrieval
-- [ ] Standalone Windows MSI & macOS DMG installer bundles
-
----
-
-## ðŸ¤ Contributing
-
-Contributions make the open-source community an inspiring place to learn, inspire, and create:
-1. **Fork** the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a **Pull Request**
-
----
-
-## ðŸ‘¨â€ðŸ’» Engineering Author
+## 7. 👨‍💻 Engineering Author
 
 <table border="0">
   <tr>
     <td width="120" align="center" valign="top">
-      <img src="https://github.com/Tharun4743.png" width="100" style="border-radius: 50%;" alt="Tharunkumar K" />
+      <img src="https://github.com/Tharun4743.png" width="100" style="border-radius: 4px;" alt="Tharunkumar K" />
     </td>
     <td>
       <h3>Tharunkumar K</h3>
       <p>
         <b>Full Stack Developer & AI Systems Engineer</b><br/>
-        ðŸŽ“ B.Tech in Information Technology â€” <a href="https://vsbec.com"><b>V.S.B. Engineering College, Karur</b></a> (Batch 2024â€“2028)<br/>
-        ðŸŒŸ Recognized for holding the <b>Best GitHub Profile & Top Student Developer</b> at V.S.B. Engineering College (VSBEC)<br/>
-        ðŸ¥‡ <b>Winner â€” Code Thugs 2K26</b> â€¢ ðŸš€ <b>Smart India Hackathon (SIH)</b> Top 50 National Finalist
+        🎓 B.Tech in Information Technology — <a href="https://vsbec.com"><b>V.S.B. Engineering College, Karur</b></a> (Batch 2024–2028)<br/>
+        🌟 Recognized for holding the <b>Best GitHub Profile & Top Student Developer</b> at V.S.B. Engineering College (VSBEC)<br/>
+        🥇 <b>Winner — Code Thugs 2K26</b> • 🚀 <b>Smart India Hackathon (SIH)</b> Top 50 National Finalist
       </p>
       <p>
-        <a href="https://tharunkumark4743.netlify.app/">ðŸŒ Portfolio</a> â€¢
-        <a href="https://github.com/Tharun4743">ðŸ™ GitHub (@Tharun4743)</a> â€¢
-        <a href="https://www.linkedin.com/in/tharunkumark4743">ðŸ’¼ LinkedIn</a> â€¢
-        <a href="https://leetcode.com/u/Tharunkumar__K/">ðŸ§© LeetCode</a> â€¢
-        <a href="mailto:tharunkumark42007@gmail.com">ðŸ“§ Email</a>
+        <a href="https://tharunkumark4743.netlify.app/">🌐 Portfolio</a> •
+        <a href="https://github.com/Tharun4743">🐙 GitHub (@Tharun4743)</a> •
+        <a href="https://www.linkedin.com/in/tharunkumark4743">💼 LinkedIn</a> •
+        <a href="https://leetcode.com/u/Tharunkumar__K/">🧩 LeetCode</a> •
+        <a href="mailto:tharunkumark42007@gmail.com">📧 Email</a>
       </p>
     </td>
   </tr>
@@ -255,24 +111,17 @@ Contributions make the open-source community an inspiring place to learn, inspir
 
 ---
 
-## ðŸ“œ License & Intellectual Property Notice
+## 8. 📜 License & Intellectual Property Notice
 
 > [!CAUTION]
-> ### ðŸ”’ PROPRIETARY & CONFIDENTIAL INTELLECTUAL PROPERTY â€” ALL RIGHTS RESERVED
+> ### 🔒 PROPRIETARY & CONFIDENTIAL INTELLECTUAL PROPERTY — ALL RIGHTS RESERVED
 >
-> All rights reserved. This repository, its architecture, source code, workflows, models, and associated documentation are the exclusive intellectual property of **Tharunkumar Kâ„¢**.
+> All rights reserved. This repository, its architecture, source code, workflows, models, and associated documentation are the exclusive intellectual property of **Tharunkumar K™**.
 >
 > **STRICT NOTICE:** No individual, organization, institution, or commercial entity is permitted to use, copy, modify, distribute, reproduce, sublicense, reverse-engineer, deploy, or commercially exploit any portion of this project without express, prior written permission from **Tharunkumar K**.
 >
-> **Copyright Â© 2026 Tharunkumar K. All Rights Reserved.**  
+> **Copyright © 2026 Tharunkumar K. All Rights Reserved.**  
 > See the [`LICENSE`](LICENSE) file for complete legal terms.
-
-<div align="center">
-  <p>If you found this engineering project useful, please give it a â­ï¸ <b>Star</b>!</p>
-  <a href="https://github.com/Tharun4743/AURA/stargazers">
-    <img src="https://repostamp.com/counter.svg?repo=Tharun4743/AURA" alt="Stargazers" />
-  </a>
-</div>
 
 <!-- =========================================================================
    SEO & SEARCH ENGINE RECRUITER METADATA (CRAWLER INDEXING)
@@ -280,6 +129,6 @@ Contributions make the open-source community an inspiring place to learn, inspir
    Institution: V.S.B. Engineering College, Karur (VSBEC)
    Department: Information Technology (Batch 2024-2028)
    Distinctions: Best GitHub Profile VSBEC, Top Developer Karur, National Hackathon Winner
-   Keywords: Tharunkumar K, Tharunkumar VSBEC, Tharun4743, VSB Engineering College Karur, VSBEC IT, AURA RAG, Air-Gapped AI, Local LLM Java Spring Boot
+   Keywords: Tharunkumar K, Tharunkumar VSBEC, Tharun4743, VSB Engineering College Karur, VSBEC IT
    Canonical URL: https://github.com/Tharun4743/AURA
 ========================================================================= -->
