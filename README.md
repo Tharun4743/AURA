@@ -51,8 +51,6 @@
 
 ## ðŸ—ï¸ System Architecture & Data Flow
 
-The following diagram illustrates AURA's local pipeline, spanning local document parsing, dense vector embeddings, vector similarity matching, and WebSocket streaming token delivery:
-
 ```mermaid
 graph TD
     subgraph Client ["Client Presentation Tier (React 19 / Electron 31)"]
@@ -138,7 +136,7 @@ AURA/
 â”‚       â”œâ”€â”€ package.json       # Frontend scripts and client libraries
 â”‚       â””â”€â”€ src/               # React components, WebSocket hooks, and state
 â”œâ”€â”€ run-web.bat                # Automated one-click Windows launcher
-â”œâ”€â”€ LICENSE                    # MIT Open-Source License
+â”œâ”€â”€ LICENSE                    # Strict Proprietary License
 â””â”€â”€ README.md                  # Authoritative system documentation
 ```
 
@@ -163,7 +161,6 @@ cd AURA
 ```
 
 ### 2. Configure Environment Variables
-Create your configuration or use the default embedded settings:
 ```bash
 cp .env.example .env
 ```
@@ -179,7 +176,6 @@ cp .env.example .env
 ```cmd
 run-web.bat
 ```
-*The script verifies dependencies, checks Ollama connectivity, boots the Spring Boot backend on port `8080`, and launches the Vite frontend on port `5173` with automatic reverse proxying.*
 
 ### 4. Manual Startup
 ```bash
